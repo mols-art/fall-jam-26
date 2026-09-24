@@ -1,100 +1,90 @@
-[gd_scene format=3 uid="uid://l13of8arxenm"]
+[gd_scene format=3 uid="uid://c5cl6olypbnsh"]
 
 [ext_resource type="Script" uid="uid://bcq7ebpnx7wq0" path="res://scripts/menu.gd" id="1_vjb58"]
-[ext_resource type="Texture2D" uid="uid://brw4fheperyfw" path="res://icon.svg" id="2_con2f"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr3o2"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p55f"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="Menu" type="Control" unique_id=80996083]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r67kn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_brbbq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Main" type="Control" unique_id=507685937]
 layout_mode = 3
-anchor_right = 0.595
-anchor_bottom = 0.71300006
-offset_left = 341.0
-offset_top = -3.0
-offset_right = -344.44006
-offset_bottom = -465.02405
+anchor_right = 0.99600005
+anchor_bottom = 1.0090001
+offset_right = -0.39208984
+offset_bottom = 0.16796875
 script = ExtResource("1_vjb58")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=139257516]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -343.0
-offset_top = 4.0
-offset_right = 811.0
-offset_bottom = 649.0
-grow_horizontal = 2
-texture = ExtResource("2_con2f")
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1479284661]
+layout_mode = 0
+offset_right = 1154.0
+offset_bottom = 647.0
 
-[node name="Label" type="Label" parent="." unique_id=806792529]
+[node name="Label" type="Label" parent="." unique_id=959064898]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 102.0
-offset_top = 6.0
-offset_right = 387.0
-offset_bottom = 102.0
+offset_left = -42.0
+offset_right = 42.0
+offset_bottom = 55.0
 grow_horizontal = 2
-theme_override_font_sizes/font_size = 55
-text = "Game Title"
+theme_override_font_sizes/font_size = 60
+text = "TITLE"
 horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=650674201]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=242652553]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 139.0
-offset_top = 176.0
-offset_right = 338.0
-offset_bottom = 391.0
+offset_left = -28.0
+offset_top = -20.0
+offset_right = 28.0
+offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 25
 
-[node name="Start" type="Button" parent="VBoxContainer" unique_id=1997176297]
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1728907232]
 layout_mode = 2
-mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.36862746, 0.9411765, 0.9764706, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.36862746, 0.9411765, 0.9764706, 1)
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mae5d")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mae5d")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_mae5d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cr3o2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5p55f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_brbbq")
 text = "START"
 
-[node name="Options" type="Button" parent="VBoxContainer" unique_id=988411380]
+[node name="Options" type="Button" parent="VBoxContainer" unique_id=795292736]
 layout_mode = 2
-mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.36862746, 0.9411765, 0.9764706, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.36862746, 0.9411765, 0.9764706, 1)
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mae5d")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mae5d")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_mae5d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cr3o2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5p55f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_brbbq")
 text = "OPTIONS"
 
-[node name="Exit" type="Button" parent="VBoxContainer" unique_id=943128997]
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=552212219]
 layout_mode = 2
-mouse_default_cursor_shape = 2
 theme_override_colors/font_hover_color = Color(0.36862746, 0.9411765, 0.9764706, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.36862746, 0.9411765, 0.9764706, 1)
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_mae5d")
-theme_override_styles/hover = SubResource("StyleBoxFlat_mae5d")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_mae5d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cr3o2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5p55f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_brbbq")
 text = "EXIT"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
