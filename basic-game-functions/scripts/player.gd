@@ -8,6 +8,8 @@ var direction_facing = 'right'
 var animation_name = 'idle'
 const JUMP_CUT_MULTIPLIER = 0.25
 
+func _ready() -> void:
+	Globals.direction_facing = direction_facing
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -35,10 +37,12 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = false
 		direction_facing = 'right'
 		animation_name = 'right'
+		Globals.direction_facing = direction_facing
 	elif direction < 0:
 		animated_sprite.flip_h = true
 		direction_facing = 'left'
 		animation_name = 'left'
+		Globals.direction_facing = direction_facing
 
 	# Apply movement
 	if direction:
