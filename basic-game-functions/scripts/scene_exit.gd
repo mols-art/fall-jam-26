@@ -24,7 +24,8 @@ func _on_body_entered(body: Node2D) -> void:
 		push_error("Unknown direction: " + str(direction))
 		changing_scene = false
 		return
-
+	
+	
 	var next_path := "res://scenes/Part_{num}.tscn".format({"num": next_level})
 
 	if not ResourceLoader.exists(next_path):
@@ -35,3 +36,4 @@ func _on_body_entered(body: Node2D) -> void:
 	Globals.direction_facing = direction
 	Globals.level_number = next_level
 	get_tree().call_deferred("change_scene_to_file", next_path)
+	Globals.has_crossed_level_1_scene_exit = true

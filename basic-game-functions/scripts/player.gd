@@ -2,10 +2,11 @@ extends CharacterBody2D
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 
-const SPEED = 120
-const JUMP_VELOCITY = -260.0
+const SPEED = 110
+const JUMP_VELOCITY = -240.0
 var direction_facing = 'right'
 var animation_name = 'idle'
+var has_crossed_level_1_scene_exit = false
 const JUMP_CUT_MULTIPLIER = 0.25
 
 func _ready() -> void:
@@ -62,5 +63,5 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.play("idle")
 	else:
 		animated_sprite.play("idle")
-	
+
 	move_and_slide()

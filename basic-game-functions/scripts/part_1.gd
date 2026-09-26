@@ -8,13 +8,6 @@ extends Node2D
 func _ready() -> void:
 	Globals.level_number = 1
 	
-	if Globals.direction_facing == "left":
-		# The player traveled left, so place them at this level's right entrance.
+	if Globals.has_crossed_level_1_scene_exit:
 		player.global_position = spawn_from_right.global_position
-		print("Spawned at right")
-	else:
-		# The player traveled right, so place them at this level's left entrance.
-		player.global_position = spawn_from_left.global_position
-		print("Spawned at left")
-
-	player.velocity = Vector2.ZERO
+			
