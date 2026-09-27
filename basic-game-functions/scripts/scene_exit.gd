@@ -36,4 +36,9 @@ func _on_body_entered(body: Node2D) -> void:
 	Globals.direction_facing = direction
 	Globals.level_number = next_level
 	get_tree().call_deferred("change_scene_to_file", next_path)
-	Globals.has_crossed_level_1_scene_exit = true
+	if Globals.level_number == 2:
+		Globals.has_crossed_level_1_scene_exit = true
+	if Globals.level_number == 3:
+		Globals.has_crossed_level_2_scene_exit = true
+	if Globals.level_number == 3:
+		Globals.has_crossed_level_3_scene_exit = true
