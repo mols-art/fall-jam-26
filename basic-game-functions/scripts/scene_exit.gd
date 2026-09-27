@@ -40,5 +40,5 @@ func _on_body_entered(body: Node2D) -> void:
 		Globals.has_crossed_level_1_scene_exit = true
 	if Globals.level_number == 3:
 		Globals.has_crossed_level_2_scene_exit = true
-	if Globals.level_number == 3:
+	if Globals.level_number == 4:
 		Globals.has_crossed_level_3_scene_exit = true

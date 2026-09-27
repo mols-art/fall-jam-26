@@ -1243,10 +1243,7 @@ position = Vector2(265, 32)
 shape = SubResource("RectangleShape2D_g8diy")
 
 [node name="SpawnFromRight" type="Marker2D" parent="." unique_id=1820116929 groups=["spawn_from_right"]]
-position = Vector2(618, 232)
-
-[node name="SpawnFromLeft" type="Marker2D" parent="." unique_id=496504593 groups=["spawn_from_left"]]
-position = Vector2(3, -7)
+position = Vector2(609, 233)
 
 [connection signal="body_entered" from="SceneExit" to="SceneExit" method="_on_body_entered"]
 [connection signal="body_exited" from="SceneExit" to="SceneExit" method="_on_body_exited"]
