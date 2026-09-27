@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://qh6cw8m0hdr8"]
+
+[ext_resource type="Script" uid="uid://dvf0tno0w1yvx" path="res://scripts/audio_manager.gd" id="1_liach"]
+[ext_resource type="AudioStream" uid="uid://0686ky3vv16b" path="res://music/3_RainingDays.wav" id="2_3asnw"]
+
+[node name="AudioManager" type="Node" unique_id=1768399821]
+script = ExtResource("1_liach")
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=722516500]
+stream = ExtResource("2_3asnw")
+volume_db = -10.0
+autoplay = true

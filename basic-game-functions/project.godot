@@ -13,11 +13,11 @@ config_version=5
 config/name="Fall Jam"
 run/main_scene="uid://c5cl6olypbnsh"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 
 Globals="*uid://dh8wxq6undygd"
+AudioManager="*uid://qh6cw8m0hdr8"
 
 [global_group]
 

@@ -1203,6 +1203,7 @@ tile_map_data = PackedByteArray("AAD/////AQADAAsAAAD//wAAAQADAAsAAAD//wEAAQADAAs
 tile_set = SubResource("TileSet_lquwl")
 
 [node name="Platform" type="TileMapLayer" parent="Player/Tilesets" unique_id=1684116635]
+texture_filter = 1
 tile_map_data = PackedByteArray("AAAKAAQAAAADAAQAAAALAAQAAAADAAQAAAANAAMAAAADAAQAAAAOAAMAAAADAAQAAAAPAAMAAAADAAQAAAARAAMAAAADAAQAAAASAAMAAAADAAQAAAARAAcAAAADAAQAAAASAAcAAAADAAQAAAA=")
 tile_set = SubResource("TileSet_sxupm")
 

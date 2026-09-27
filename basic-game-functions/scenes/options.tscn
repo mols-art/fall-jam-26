@@ -1,6 +1,53 @@
-[gd_scene format=3 uid="uid://blkg2vfa1nv0w"]
+[gd_scene format=4 uid="uid://blkg2vfa1nv0w"]
 
 [ext_resource type="Script" uid="uid://cnytkeja7cb0n" path="res://scripts/options.gd" id="1_c2u1v"]
+[ext_resource type="Texture2D" uid="uid://csbgu05p3hf88" path="res://sprites/Tiny Platformer - Forest Asset Pack/Tiny Platformer - Forest Asset Pack/Tileset(16x16)/Tileset.png" id="2_yjkok"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2iy26"]
+texture = ExtResource("2_yjkok")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_kv8mn"]
+sources/0 = SubResource("TileSetAtlasSource_2iy26")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr3o2"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -21,6 +68,19 @@ anchor_bottom = 1.0090001
 offset_right = -0.39208984
 offset_bottom = 0.16796875
 script = ExtResource("1_c2u1v")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1498222962]
+texture_filter = 1
+scale = Vector2(10, 10)
+tile_map_data = PackedByteArray("AAAAAAAAAAADAAAAAAABAAAAAAADAAAAAAACAAAAAAADAAAAAAADAAAAAAADAAAAAAAEAAAAAAADAAAAAAAFAAAAAAADAAAAAAAGAAAAAAADAAAAAAAHAAAAAAAEAAAAAAD//wAAAAACAAAAAAD/////AAADAAIAAAAAAP//AAADAAIAAAABAP//AAADAAIAAAACAP//AAADAAIAAAADAP//AAADAAIAAAAEAP//AAADAAIAAAAFAP//AAADAAIAAAAGAP//AAADAAIAAAAHAP//AAADAAIAAAD//wEAAAACAAEAAAAAAAEAAAADAAEAAAABAAEAAAADAAEAAAACAAEAAAADAAEAAAADAAEAAAADAAEAAAAEAAEAAAADAAEAAAAFAAEAAAADAAEAAAAGAAEAAAADAAEAAAAHAAEAAAAEAAEAAAD//wIAAAACAAEAAAAAAAIAAAADAAEAAAABAAIAAAADAAEAAAACAAIAAAADAAEAAAADAAIAAAADAAEAAAAEAAIAAAADAAEAAAAFAAIAAAADAAEAAAAGAAIAAAADAAEAAAAHAAIAAAAEAAEAAAD//wMAAAACAAIAAAAHAAMAAAAEAAIAAAAAAAMAAAADAAIAAAABAAMAAAADAAIAAAACAAMAAAADAAIAAAADAAMAAAADAAIAAAAEAAMAAAADAAIAAAAFAAMAAAADAAIAAAAGAAMAAAADAAIAAAA=")
+tile_set = SubResource("TileSet_kv8mn")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1009578554]
+z_index = -1
+texture_filter = 1
+scale = Vector2(10, 10)
+tile_map_data = PackedByteArray("AAD//wAAAAACAAEAAAAHAAAAAAAEAAEAAAA=")
+tile_set = SubResource("TileSet_kv8mn")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1479284661]
 layout_mode = 0
@@ -54,6 +114,18 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="FullscreenButton" type="CheckButton" parent="VBoxContainer" unique_id=526087208]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.36862746, 0.9411765, 0.9764706, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.36862746, 0.9411765, 0.9764706, 1)
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_cr3o2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5p55f")
+theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_brbbq")
+text = "FULLSCREEN"
+
 [node name="Back" type="Button" parent="VBoxContainer" unique_id=1728907232]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.36862746, 0.9411765, 0.9764706, 1)
@@ -65,4 +137,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_r67kn")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_brbbq")
 text = "BACK"
 
+[connection signal="toggled" from="VBoxContainer/FullscreenButton" to="." method="_on_fullscreen_button_toggled"]
 [connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

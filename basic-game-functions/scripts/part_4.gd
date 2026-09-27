@@ -7,6 +7,7 @@ extends Node2D
 
 func _ready() -> void:
 	Globals.level_number = 4
+	AudioManager.play_music()
 	
 	if Globals.has_crossed_level_4_scene_exit:
 		player.global_position = spawn_from_right.global_position
